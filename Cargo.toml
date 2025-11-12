@@ -1,0 +1,37 @@
+[package]
+name = "matterhorn_ah"
+version = "0.1.0"
+edition = "2021"
+license = "MIT OR Apache-2.0"
+authors = ["AH"]
+description = "Matterhorn AH — Real-time fractal studio (starter)"
+
+[features]
+default = []
+gpu = ["wgpu", "pollster", "bytemuck"]
+
+[dependencies]
+# UI & App shell
+eframe = { version = "0.27", default-features = false, features = ["wgpu"] }
+egui = "0.27"
+
+# Serialization
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+toml = "0.8"
+
+# Imaging
+image = { version = "0.24", default-features = false, features = ["png"] }
+
+# CLI (optional headless render)
+clap = { version = "4", features = ["derive"] }
+
+# Utilities
+thiserror = "1"
+rfd = "0.14"
+tempfile = "3"
+
+# Optional GPU path
+wgpu = { version = "0.19", optional = true }
+pollster = { version = "0.3", optional = true }
+bytemuck = { version = "1", features = ["derive"], optional = true }
