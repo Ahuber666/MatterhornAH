@@ -2,6 +2,29 @@
 
 Matterhorn AH is a real-time fractal studio built with egui/eframe. It pairs an interactive viewport with timeline-driven animation, palette tooling, orbit traps, and an export pipeline that tiles frames before feeding them to FFmpeg.
 
+## ASCII Fractal Snapshot
+
+This Sierpinski-style triangle nods to the endlessly recursive geometry that Matterhorn AH explores:
+
+```text
+               *
+              * *
+             *   *
+            * * * *
+           *       *
+          * *     * *
+         *   *   *   *
+        * * * * * * * *
+       *               *
+      * *             * *
+     *   *           *   *
+    * * * *         * * * *
+   *       *       *       *
+  * *     * *     * *     * *
+ *   *   *   *   *   *   *   *
+* * * * * * * * * * * * * * * *
+```
+
 ## Feature Highlights
 - CPU renderer included, with optional wgpu-powered GPU mode (`--features gpu`) for larger scenes.
 - Multiple fractal types (Mandelbrot, Julia, Burning Ship, Multibrot) with adjustable power, escape radius, and Julia `c`.
